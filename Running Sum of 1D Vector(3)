@@ -1,0 +1,16 @@
+fn running_sum(nums: Vec<i32>) -> Vec<i32> {
+    let mut running_sums = Vec::new();
+    let mut current_sum = 0;
+
+    for num in nums {
+        current_sum += num;
+        running_sums.push(current_sum);
+    }
+
+    running_sums
+}
+
+fn main() {
+    // Test with the provided input
+    println!("{:?}", running_sum(vec![3, 1, 2, 10, 1])); // Expected output: [3, 4, 6, 16, 17]
+}
